@@ -9,7 +9,10 @@ Koitin ladata läppärilleni, (HP envy x360 convertible 15-dr0002no), jossa on U
 Tämä sama errori oli tullut aikaisemmin, kun koitin ladata toista linux-distroa. Kovasti koitin muunnella kaikenmaailman asetuksia, mutta ei mikään auttanut. Päivitin kaikki ajurit, toivoen että ongelma lähtisi sillä, mutta ei. Sitten tulikin seuraavanlainen ongelma:
 
 ![20250818_180944](https://github.com/user-attachments/assets/1815eb8f-38be-4748-884a-8b3c576c4112)
+
 Näyttäisi siltä että jokin komponentti oli mäsänä läppärissä. Vituttihan se, mutta ajattelin, että no ainakin ratkesi syy sille, miksi tuli aikaisemmin erroria virtuaalikoneen kanssa.
-Kävin ostamassa torista uuden läppärin (ThinkPad t14 gen 2, intel-versio),latasin sille myös dual-boottina Ubuntun, ja kuinkas ollakaan, sillä tuli samat errorit. Googlailemalla huomasin kyllä, että monilla Ubuntun käyttäjillä oli samanlaisia kriittisiä erroreita VirtualBoxin kanssa. Joku nettifoorumilla neuvoi palauttamaan VirtualBoxin aikaisempaan versioon, mutta jo kymmenen tuntia kamppailleena luovutin VirtualBoxin suhteen ja tein kuten Lari Iso-Anttila neuvoi, eli karttamaan VirtualBoxin kaukaa ja lataamaan esimerkiksi VMware workstationin, joka on nyt saatavilla yksityiskäyttöön ilmaiseksi. Teinkin juuri niin ja nyt pelittää ongelmitta. 
+Kävin ostamassa torista uuden läppärin (ThinkPad t14 gen 2, intel-versio),latasin sille myös dual-boottina Ubuntun, ja kuinkas ollakaan sillä tuli samat errorit.
+Googlailemalla huomasin kyllä, että monilla Ubuntun käyttäjillä oli samanlaisia kriittisiä erroreita VirtualBoxin kanssa. Joku nettifoorumilla neuvoi palauttamaan VirtualBoxin aikaisempaan versioon, mutta jo kymmenen tuntia kamppailleena luovutin VirtualBoxin suhteen ja tein kuten Lari Iso-Anttila neuvoi, eli karttamaan VirtualBoxin kaukaa ja lataamaan esimerkiksi VMware workstationin, joka on nyt saatavilla yksityiskäyttöön ilmaiseksi. Teinkin juuri niin ja nyt pelittää ongelmitta. 
+
 Jatkossa raportit tulevat varmasti olemaan kattavampia ja tulen syventymään yksityiskohtaisemmin ongelmanratkaisuihin ja tiedonhakuun. Nyt oli vaan kiire saada toimiva laite käsiini.
 

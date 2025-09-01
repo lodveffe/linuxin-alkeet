@@ -1,8 +1,8 @@
 # Komentorivin perusteet
 
-Peruskomentoja:
+## Peruskomentoja:
 
-[https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited](laitan Teron cheatsheetin tänne)
+[Laitan Teron komentorivicheatsheetin tänne](https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited)
 
 Ladataanpas muutamat komentoriviohjelmat.
 Kaikki löyty kun Googlaili käyttäjien lemppari komentorivityökaluja.
@@ -42,3 +42,20 @@ ja näin se sanoi?
 <img width="696" height="269" alt="image" src="https://github.com/user-attachments/assets/37102460-1222-4d45-8cd8-843c9873bb1a" />
 
 Hämmentävää. Ehkä se sitten latasi kaiken aikaisemmalla komennolla.
+
+## Tärkeät kansiot
+
+Kun halutaan roottiin, eli kaiken juurelle, niin
+
+        cd /
+
+tai sitten vaan tsekataan että missä mennään komennolla ls ja siirrytään ylöspäin kansioissa kohti roottia cd ..
+<img width="861" height="395" alt="image" src="https://github.com/user-attachments/assets/55d01d8a-6f47-4ecd-a28e-7650b2833861" />
+
+roottikansio sisältää siis kaiken. Mukaan lukien käyttäjien kotikansiot, joihin pääsee takaisin 
+
+        cd home/käyttäjä/
+        tai sitten cd ~
+        #tuosta kiekurasta tietää että on kotikansiossa^
+
+

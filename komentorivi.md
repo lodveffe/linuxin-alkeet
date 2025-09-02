@@ -123,7 +123,7 @@ Katsotaas `lshw -short -sanitize` avulla tietoja läppärini komponenteista. Sho
 
 <img width="1074" height="998" alt="Screenshot from 2025-09-02 16-45-42" src="https://github.com/user-attachments/assets/ae95e197-7b58-4f87-bbef-656fb5669ec2" />
 
-OK. Eli siis näkyy tietoja eri komponenteista. Mutta mitä H / W path meinaa? täytyi kyllä isosti googlailla vastausta ja ne meinannee komponenttien hierarkkista sijaintia. Jos nyt toi `/0` on ns. root, niin eka iso komponentti siinä on emolevy `/0/1` ja emolevyssä on kiinni sitten RAM-muistit `/0/1/0` ja `0/1/1` jne...
+OK. Eli siis näkyy tietoja eri komponenteista. Mutta mitä H / W path meinaa? täytyi kyllä isosti googlailla vastausta ja ne meinannee komponenttien hierarkkista sijaintia. Jos nyt toi system on ns. root, niin eka iso komponentti siinä on emolevy `/0` ja emolevyssä on kiinni sitten RAM-muistit `/0/1` ja `0/1/0` jne...
 
 Huhhuh kylläpä kesti näiden läksyjen kanssa. Mutta tuntuu siltä että myös oppii.
 

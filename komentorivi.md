@@ -69,7 +69,7 @@ Eli etc/ on täynnä siis tekstipohjaisia asetustiedostoja.
 
 <img width="800" height="284" alt="image" src="https://github.com/user-attachments/assets/94159d28-1b72-40ec-93e6-4b4f14aaa370" />
 
-Tuosta näkyy kuinka ekaksi media/loffe/ ei sisältänyt mitään, kunnes tokan ls-komennon kohdalla olin liittänyt Ubuntun sisältävän USB-tikun.
+Tuosta näkyy kuinka ekaksi media/loffe/ ei sisältänyt mitään, kunnes tokan `ls`-komennon kohdalla olin liittänyt Ubuntun sisältävän USB-tikun.
 
 Kurkataas sitten myös /var/log/syslog. Testataan lukea sitä käyttämällä absoluuttista polkua.
 
@@ -84,3 +84,18 @@ no huhhuh en kyllä ihan niin pitkällä opintoja ole, että tosta ymmärtäisin
 <img width="810" height="416" alt="image" src="https://github.com/user-attachments/assets/669bb478-2d25-4fdd-a3a6-a9526d8d9dbf" />
 
 Vähän lisäsi tuo bat väriä tulosteeseen, mutta ei mun ymmärrykseen. Toivottavasti tämän kurssin jälkeen saa tuosta jotain tolkkua :)
+
+Tutustutaan vielä `grep`-komentoon. Samalla voidaan verrata tuota `tldr`-työkalua, jonka latasin, manual pagesiin eli `man`
+
+        man grep
+
+<img width="808" height="528" alt="image" src="https://github.com/user-attachments/assets/6431a536-d887-4acb-93d6-f7b3b1fe4a27" />
+
+647 riviä manuaalia, joka ohjaa lopuksi vielä complete manualiin...
+
+        tldr grep
+
+<img width="1214" height="675" alt="image" src="https://github.com/user-attachments/assets/32a472a8-d4a2-499a-acfd-5de49cb959f6" />
+
+`tldr` tuntuu puolestaan aika suppealta.
+

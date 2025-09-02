@@ -29,7 +29,7 @@ Testataanpas ladata nämä kaikki yhdellä komennolla
 
 Näköjään se löysi vain tldr noista ja htop taisi olla jo ladattuna. Katotaas mitä se sanoo jos kirjoittaa vaan bat
 
-    <img width="570" height="187" alt="image" src="https://github.com/user-attachments/assets/fc429cab-9a97-402b-96d4-4feb5ba06eab" />
+<img width="570" height="187" alt="image" src="https://github.com/user-attachments/assets/fc429cab-9a97-402b-96d4-4feb5ba06eab" />
 
 Okeei no ei se kyllä toi paketti ole. Varmistin sen vielä menemällä nettisivulle jossa kerrotaan infoa batista. 
 <img width="700" height="359" alt="image" src="https://github.com/user-attachments/assets/8da9db99-3b3a-4687-9be8-582b439bb432" />
@@ -57,5 +57,30 @@ roottikansio sisältää siis kaiken. Mukaan lukien käyttäjien kotikansiot, jo
         cd home/käyttäjä/
         tai sitten cd ~
         #tuosta kiekurasta tietää että on kotikansiossa^
+        
+mutta takaisin ihmettelemään rootkansiota.
 
+etc/-kansiota tutkiessani löysin papersize-nimisen tiedoston. Kurkataanpa sinne.
+<img width="803" height="170" alt="image" src="https://github.com/user-attachments/assets/ce35c263-c332-4786-a070-239dc314cadd" />
 
+Eli etc/ on täynnä siis tekstipohjaisia asetustiedostoja.
+
+/media/ sisältää automaattisesti liitetyt usb-tikut, cd-levyt, ulkoiset kovalevyt, ISO-tiedostot yms. 
+
+<img width="800" height="284" alt="image" src="https://github.com/user-attachments/assets/94159d28-1b72-40ec-93e6-4b4f14aaa370" />
+
+Tuosta näkyy kuinka ekaksi media/loffe/ ei sisältänyt mitään, kunnes tokan ls-komennon kohdalla olin liittänyt Ubuntun sisältävän USB-tikun.
+
+Kurkataas sitten myös /var/log/syslog. Testataan lukea sitä käyttämällä absoluuttista polkua.
+
+        cat /var/log/syslog
+        
+<img width="810" height="416" alt="image" src="https://github.com/user-attachments/assets/3dc55be8-fee4-477e-8f7d-18355e082c46" />
+
+no huhhuh en kyllä ihan niin pitkällä opintoja ole, että tosta ymmärtäisin.
+
+        batcat /var/log/syslog
+        
+<img width="810" height="416" alt="image" src="https://github.com/user-attachments/assets/669bb478-2d25-4fdd-a3a6-a9526d8d9dbf" />
+
+Vähän lisäsi tuo bat väriä tulosteeseen, mutta ei mun ymmärrykseen. Toivottavasti tämän kurssin jälkeen saa tuosta jotain tolkkua :)

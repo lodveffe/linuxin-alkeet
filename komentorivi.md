@@ -102,3 +102,8 @@ Tutustutaan vielä `grep`-komentoon. Samalla voidaan verrata tuota `tldr`-työka
 <img width="522" height="87" alt="image" src="https://github.com/user-attachments/assets/77b4e5e3-e1f2-449d-8c67-8e5aaf188997" />
 
 Hienosti tuntuu toimivan. Kokeillaanpas lisätä komentoja siihen.
+
+lisätään greppiin -e, jolloin voi antaa monta eri patternia, jota haetaan
+
+<img width="732" height="79" alt="image" src="https://github.com/user-attachments/assets/61f5433f-3c08-4fd4-a5da-abeb12ed549d" />
+

@@ -99,3 +99,6 @@ Tutustutaan vielä `grep`-komentoon. Samalla voidaan verrata tuota `tldr`-työka
 
 `tldr` tuntuu puolestaan aika suppealta.
 
+<img width="522" height="87" alt="image" src="https://github.com/user-attachments/assets/77b4e5e3-e1f2-449d-8c67-8e5aaf188997" />
+
+Hienosti tuntuu toimivan. Kokeillaanpas lisätä komentoja siihen.

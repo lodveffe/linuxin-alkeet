@@ -113,3 +113,16 @@
 
   <img width="914" height="328" alt="image" src="https://github.com/user-attachments/assets/d541ca70-7d76-4a3b-924e-aca577e3eca1" />
 
+  kun taas `curl -I` näyttää sivuston headerin. Tässä screenshotti curlin manual pagesta:
+
+  <img width="1213" height="261" alt="image" src="https://github.com/user-attachments/assets/66e1ec2a-8aca-470a-9e71-df6dfed08367" />
+
+  Eli `curl -I` tai `(--head)` tekee pelkästään header-pyynnön palvelimelle, eikä hae sivun koko sisältöä, vain otsakkeet.
+
+  Tässä tuloste `curl -I hattu.example.com` 
+
+  <img width="729" height="209" alt="image" src="https://github.com/user-attachments/assets/ebc725ca-903d-44f5-9776-71793fc4005b" />
+
+  Siinä näkyy tiiviimmässä paketissa infoa sivustosta. E-tag on tunniste, jolla selain ja palvelin pysyvät kärryillä siitä, onko sivua muokattu. Jos ei ole ja e-tag on sama kuin viime kerralla kun sivustolla on vierailtu, niin selain voi ladata käyttäjälle sivuston nopeammin välimuistista. [Tästä siitä lisää](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag)
+
+  Huhhuh oli taas paljon asiaa. Seuraavalla tunnilla saankin tämän hienon hattusivuston koko internetille auki pilvipalvelimen avulla.

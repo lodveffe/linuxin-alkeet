@@ -51,5 +51,65 @@
 
   viimeisimpänä lokissa näkyy `"curl/8.14.1"`. Tämä on user-agent, joka kertoo palvelimelle, mikä ohjelma teki pyynnön. Jos olisi esim. Mozillalla hakenut localhostia, niin tässä näkyisi `"Mozilla/5.0"`
 
-  
-  
+  ## Tehdään uusi name-based virtual host
+
+  Tässä vaiheessa täytyy palauttaa muistia vierailemalla [Johannan repolla](https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md).
+
+  Okei eli ensiksi tehdään konffitiedosto. Siirryn sites-available hakemistoon.
+
+          cd /etc/apache2/sites-available
+
+  Sitten se konffitiedosto nimeltä hattu.conf
+
+          sudo micro hattu.conf
+
+  Itse asiassa taidan kopsata site1.com.conf tiedoston ja nimetä sen hattu.conf ja muokata sitä niin pääsen vähän helpommalla.
+
+          sudo cp site1.com.conf hattu.conf
+
+  No nyt kun on muokattu konffitiedostot, niin pistetääs uusi sivusto käyttöön ja vanha poies.
+
+          sudo a2dissite site1.com.conf
+          sudo a2ensite hattu.conf
+          sudo systemctl reload apache2
+
+  Ja testataas `curl hattu.com`
+
+  Hetken olin hämilläni että oonko hakkeroinut jonkun vai mikä homma kun tuli kaikenmaailman infoa eri hatuista ja yhteystietoja esiin, kunnes tajusin että sivuston nimihän on `hattu.example.com`... Testataas sillä.
+
+  could not resolve host.... hmmm
+
+  No niinhän se oli että täytyi lisätä /etc/hosts-tiedostoon rivi `hattu.example.com`
+
+  <img width="882" height="256" alt="image" src="https://github.com/user-attachments/assets/9956c378-f5cd-47e6-8486-06192be445ad" />
+
+  Okeei nyt se kyllä latasi sivun, mutta sen defaultin eikä hatun oman html... let's see mikä meni mönkään
+
+  <img width="882" height="256" alt="image" src="https://github.com/user-attachments/assets/cc459339-9eff-41d3-a012-345a04a6de3b" />
+
+  Ei ihme että meni mönkään. Olin unohtanut pisteet hattu.example.comista... Tässä huomaa kuinka pienestä voi olla kiinni. Korjataas ne ja testataan uudestaan.
+
+  <img width="873" height="119" alt="image" src="https://github.com/user-attachments/assets/273f368f-b392-45c3-a681-1dcb76781404" />
+
+  No nyt!
+
+  ## Validi HTML5-sivu
+
+  Tehdään sivustosta hieman siistimpi lisäämällä HTML-koodia, eli headereita bodya yms.
+
+  Huomasin, että index.html, vaikka onkin kotihakemistossani, niin on rootin omistama tiedosto, eli tarvitsin sudoa sitä muokatakseni. Näin vaihdoin tiedoston omistajan:
+
+  <img width="871" height="179" alt="image" src="https://github.com/user-attachments/assets/57c4682a-8087-48d7-90f0-1e9525c9ed38" />
+
+  Nyt pystyn ilman sudoa muokkaamaan sivustoa.
+
+  Lopputulos:
+
+  <img width="1104" height="465" alt="image" src="https://github.com/user-attachments/assets/4b102aeb-0a32-4b02-9688-d77fe4a0178b" />
+
+  Ois varmaan pitänyt ottaa niitä CSS-kursseja...
+
+  `curl` näyttää koko sivuston:
+
+  <img width="914" height="328" alt="image" src="https://github.com/user-attachments/assets/d541ca70-7d76-4a3b-924e-aca577e3eca1" />
+

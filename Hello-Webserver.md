@@ -34,4 +34,22 @@
 
   Tähän väliin aikaleima.
 
-  `GET / HTTP/1.1` -> kun käytettiin `curl` niin se lähetti HTTP GET-pyynnön palvelimelle, pyytäen pääsyä resurssiin, eli tässä tapauksessa weppisivuun. `/` GETin jälkeen tarkoittaa resurssin polkua palvelimella, eli missä se etusivu sijaitsee; rootissa.
+  `GET / HTTP/1.1` -> kun käytettiin `curl` niin se lähetti HTTP GET-pyynnön palvelimelle, pyytäen pääsyä resurssiin, eli tässä tapauksessa weppisivuun. `/` GETin jälkeen tarkoittaa resurssin polkua palvelimella,      eli missä se etusivu sijaitsee; DocumentRootissa
+
+  <img width="882" height="256" alt="image" src="https://github.com/user-attachments/assets/6a623c57-70ab-48ea-a56c-3c23bd7e31fb" />
+
+  Täältä näkyy, mihin `GET /` johtaa – /var/www/html
+  Jos oltaisiin curlattu jotain muuta kuin etusivua, niin lokissa olisi näkynyt sen resurssin sijainti `/`jälkeen esim `GET /laksut.html`
+
+  HTTP1.1 puolestaan meinaa protokollaa, joka määrittelee säännöt, miten selain ja palvelin kommunikoivat.
+
+  `200` meinaa että kaikki OK. HTTP-statuskoodi
+
+  `10705` on tavujen määrä, jota siirrettiin
+
+  tuo `"-"` on referer, joka kertoo, mistä clientti koittaa saapua sivulle. Jos käyttäjä hakee sivun suoraan osoiteriviltä, niin se jää tyhjäksi, niinkuin nyt. Muuten siinä näkyisin sen sivun URL, josta käyttäjä  saapui esim. linkin kautta.
+
+  viimeisimpänä lokissa näkyy `"curl/8.14.1"`. Tämä on user-agent, joka kertoo palvelimelle, mikä ohjelma teki pyynnön. Jos olisi esim. Mozillalla hakenut localhostia, niin tässä näkyisi `"Mozilla/5.0"`
+
+  
+  

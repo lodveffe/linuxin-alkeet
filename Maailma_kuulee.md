@@ -28,7 +28,7 @@ No sieltähän saatiin suora vastaus. Eli kirjotusvirhe!
 
 
 <img width="866" height="164" alt="image" src="https://github.com/user-attachments/assets/05db2be0-bb5b-48a6-aa80-50ae052fe670" />
-
+Eikö mulla ole sitten asetettu oikeuksia oikein?
 
 <img width="861" height="250" alt="image" src="https://github.com/user-attachments/assets/9e1d8ab1-ec75-47cf-9ae3-fa69cc53fa79" />
 
@@ -38,3 +38,21 @@ emt kaikkea tässä on nyt testattu mutta silti:
 
 Nyt en jaksa enään kikkailla tän kaa. antaa olla. joku viis tuntia tässä koitin troubleshoottaa.
 
+Okei saavuin takas skidi huilimisen jälkeen. testaillaas taas...
+
+Lisäsin uussivu.com.conffiin Directory-lohkoon tämmöset setit
+<img width="841" height="262" alt="Screenshot from 2025-09-15 22-27-07" src="https://github.com/user-attachments/assets/473bb0b0-01bd-4768-9de8-a8208204d27c" />
+
+Hallelujaah vihdoin skulaa, mutta mikä ihmeen index??
+
+
+<img width="830" height="218" alt="image" src="https://github.com/user-attachments/assets/29304e89-f7b1-4f14-9384-0440beb8f462" />
+
+Täytyy myöntää että nyt kyllä tässä vaiheessa käyn jo kiivasta keskustelua ChatGPT:n kanssa. Selvisi semmoinen, ettei mitään tätä 403 error-rumbaa olisi ollut, jos olisin tehnyt muutoksia index.html nimiseen tiedostoon, mutta kun sen sijaan käytän uussivu.html-nimistä, niin apache ei tiennyt mitä näyttää. Mutta kun lisättiin nuo aikaisemmat Directorylohkoon Options Indexes, niin apache osaa näyttää jotain muuta kuin sen index.html
+
+        mv /home/marek/public-sites/uussivu.html index.html
+
+
+<img width="841" height="262" alt="image" src="https://github.com/user-attachments/assets/9d7a8202-dd4e-4b36-9af6-e7f12d10d4bb" />
+
+Huhhuh meni tässäkin joku 7h sit yhteensä...

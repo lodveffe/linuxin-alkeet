@@ -11,13 +11,6 @@ Eli ekaks tehdään uudelle sivulle conffifile
 
 
 
-
-
-
-
-
-
-
 <img width="906" height="535" alt="image" src="https://github.com/user-attachments/assets/e6bbccbd-31dc-4849-841a-7a37243d5667" />
 
 
@@ -32,3 +25,9 @@ No sieltähän saatiin suora vastaus. Eli kirjotusvirhe!
 
 
 <img width="876" height="349" alt="image" src="https://github.com/user-attachments/assets/eb33f307-ce24-4568-94d8-ea813b3d9617" />
+
+
+<img width="866" height="164" alt="image" src="https://github.com/user-attachments/assets/05db2be0-bb5b-48a6-aa80-50ae052fe670" />
+
+
+<img width="861" height="250" alt="image" src="https://github.com/user-attachments/assets/9e1d8ab1-ec75-47cf-9ae3-fa69cc53fa79" />

@@ -31,3 +31,10 @@ No sieltähän saatiin suora vastaus. Eli kirjotusvirhe!
 
 
 <img width="861" height="250" alt="image" src="https://github.com/user-attachments/assets/9e1d8ab1-ec75-47cf-9ae3-fa69cc53fa79" />
+
+emt kaikkea tässä on nyt testattu mutta silti:
+
+<img width="830" height="218" alt="image" src="https://github.com/user-attachments/assets/e1c85749-1cc1-4596-8590-cb5f853cbcdc" />
+
+Nyt en jaksa enään kikkailla tän kaa. antaa olla. joku viis tuntia tässä koitin troubleshoottaa.
+

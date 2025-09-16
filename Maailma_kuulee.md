@@ -14,9 +14,24 @@ Ajetaan `sudo apache2ctl configtest`, jospa se antaisi tarkemmat infot mikä on 
 <img width="861" height="106" alt="image" src="https://github.com/user-attachments/assets/f969f174-ebfc-418f-bfaa-c7d98416c0b0" />
 
 
-No sieltähän saatiin suora vastaus. Eli kirjoitusvirhe! Korjataas se, eli `sudo micro /etc/apache2/available-sites/uussivu.com.conf`, ja sieltä näpytellään syntaksi kunnolliseksi. Niinkuin alhaalta näkyy, sen jälkeen sitten onnistuikin `sudo systemctl reload apache2`
-Tämän jälkeen tsekkasin, että näkyykö uussivu.com.conf kohdalla symbolinen linkki eli toi turkoosi/syaani väri, joka meinais sitä että se on käytössä. `cd /etc/apache2/sites-enabled`
-Näyttää hyvältä, mutta halutaan toi 000-default.conf pois käytöstä, joten `sudo a2dissite 000-default.conf`. Tätä seuraa tietysti `systemctl reload apache2`, jotta asetukset päivittyy. Mutta mitä hemmettiä, taas erroria?? `sudo apache2ctl configtest` tulille ja siellä hälytetään ettei DNS:stä olla ihan varmoja. No eihän mulla semmosta vielä ole kun se on seuraavan luennon aihe, joten väliaikaisesti sen voi korjata lisäämällä `sudo micro /etc/hosts`-tiedostoon 127.0.0.1 uussivu, jotta apache tietää mitä host-headeria haetaan. 
+No sieltähän saatiin suora vastaus. Eli kirjoitusvirhe! 
+Korjataas se, eli 
+
+`sudo micro /etc/apache2/available-sites/uussivu.com.conf`
+
+ja sieltä näpytellään syntaksi kunnolliseksi. 
+
+Niinkuin alhaalta näkyy, sen jälkeen sitten onnistuikin `sudo systemctl reload apache2`
+
+Tämän jälkeen tsekkasin, että näkyykö uussivu.com.conf kohdalla symbolinen linkki eli toi turkoosi/syaani väri, joka meinais sitä että se on käytössä. 
+
+`cd /etc/apache2/sites-enabled`
+
+Näyttää hyvältä, mutta halutaan toi 000-default.conf pois käytöstä, joten `sudo a2dissite 000-default.conf`. 
+
+Tätä seuraa tietysti `systemctl reload apache2`, jotta asetukset päivittyy.
+
+Mutta mitä hemmettiä, taas erroria?? `sudo apache2ctl configtest` tulille ja siellä hälytetään ettei DNS:stä olla ihan varmoja. No eihän mulla semmosta vielä ole kun se on seuraavan luennon aihe, joten väliaikaisesti sen voi korjata lisäämällä `sudo micro /etc/hosts`-tiedostoon 127.0.0.1 uussivu, jotta apache tietää mitä host-headeria haetaan. 
 
 
 <img width="876" height="349" alt="image" src="https://github.com/user-attachments/assets/eb33f307-ce24-4568-94d8-ea813b3d9617" />
@@ -26,32 +41,32 @@ Tämän muutoksen jälkeen configtesti antaa ookoota ja reloadaan apachen uudest
 
 <img width="866" height="164" alt="image" src="https://github.com/user-attachments/assets/05db2be0-bb5b-48a6-aa80-50ae052fe670" />
 
-Okei. Testaas nyt sitten 
-Eikö mulla ole sitten asetettu oikeuksia oikein?
+Tsekataan vielä, että oikeudet on annettu otherssille, jotta apache pääsee käsiksi kotihakemistooni.
 
 <img width="861" height="250" alt="image" src="https://github.com/user-attachments/assets/9e1d8ab1-ec75-47cf-9ae3-fa69cc53fa79" />
 
-emt kaikkea tässä on nyt testattu mutta silti:
+`curl uussivu`:
 
 <img width="830" height="218" alt="image" src="https://github.com/user-attachments/assets/e1c85749-1cc1-4596-8590-cb5f853cbcdc" />
 
-Nyt en jaksa enään kikkailla tän kaa. antaa olla. joku viis tuntia tässä koitin troubleshoottaa.
+Nyt on tauon paikka.
 
-Okei saavuin takas skidi huilimisen jälkeen. testaillaas taas...
+Okei saavuin takas skidi huilimisen jälkeen.
 
-Lisäsin uussivu.com.conffiin Directory-lohkoon tämmöset setit
+Lisäsin uussivu.com.conffiin Directory-lohkoon tämmöset setit:
 <img width="841" height="262" alt="Screenshot from 2025-09-15 22-27-07" src="https://github.com/user-attachments/assets/473bb0b0-01bd-4768-9de8-a8208204d27c" />
 
 Hallelujaah vihdoin skulaa, mutta mikä ihmeen index??
 
-
 <img width="830" height="218" alt="image" src="https://github.com/user-attachments/assets/29304e89-f7b1-4f14-9384-0440beb8f462" />
 
 Täytyy myöntää että nyt kyllä tässä vaiheessa käyn jo kiivasta keskustelua ChatGPT:n kanssa. Selvisi semmoinen, ettei mitään tätä 403 error-rumbaa olisi ollut, jos olisin tehnyt muutoksia index.html nimiseen tiedostoon, mutta kun sen sijaan käytän uussivu.html-nimistä, niin apache ei tiennyt mitä näyttää. Mutta kun lisättiin nuo aikaisemmat Directorylohkoon Options Indexes, niin apache osaa näyttää jotain muuta kuin sen index.html
+
+Vaihdoin sen html-tiedoston nimeä, ja näin se osasi suoraan ladata oikean sivun.
 
         mv /home/marek/public-sites/uussivu.html index.html
 
 
 <img width="841" height="262" alt="image" src="https://github.com/user-attachments/assets/9d7a8202-dd4e-4b36-9af6-e7f12d10d4bb" />
 
-Huhhuh meni tässäkin joku 7h sit yhteensä...
+Huhhuh meni tässäkin joku 7h sit yhteensä... Täytyy vielä muutama kerta tehdä tämä niin alkaa tulla rutiinilla. Lisään myöhemmin kaikki lähdemerkkinnät yms. Nyt on kiire palauttaa tämä.

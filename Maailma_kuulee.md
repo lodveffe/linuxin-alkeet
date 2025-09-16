@@ -14,13 +14,19 @@ Ajetaan `sudo apache2ctl configtest`, jospa se antaisi tarkemmat infot mikä on 
 <img width="861" height="106" alt="image" src="https://github.com/user-attachments/assets/f969f174-ebfc-418f-bfaa-c7d98416c0b0" />
 
 
-No sieltähän saatiin suora vastaus. Eli kirjoitusvirhe!
+No sieltähän saatiin suora vastaus. Eli kirjoitusvirhe! Korjataas se, eli `sudo micro /etc/apache2/available-sites/uussivu.com.conf`, ja sieltä näpytellään syntaksi kunnolliseksi. Niinkuin alhaalta näkyy, sen jälkeen sitten onnistuikin `sudo systemctl reload apache2`
+Tämän jälkeen tsekkasin, että näkyykö uussivu.com.conf kohdalla symbolinen linkki eli toi turkoosi/syaani väri, joka meinais sitä että se on käytössä. `cd /etc/apache2/sites-enabled`
+Näyttää hyvältä, mutta halutaan toi 000-default.conf pois käytöstä, joten `sudo a2dissite 000-default.conf`. Tätä seuraa tietysti `systemctl reload apache2`, jotta asetukset päivittyy. Mutta mitä hemmettiä, taas erroria?? `sudo apache2ctl configtest` tulille ja siellä hälytetään ettei DNS:stä olla ihan varmoja. No eihän mulla semmosta vielä ole kun se on seuraavan luennon aihe, joten väliaikaisesti sen voi korjata lisäämällä `sudo micro /etc/hosts`-tiedostoon 127.0.0.1 uussivu, jotta apache tietää mitä host-headeria haetaan. 
 
 
 <img width="876" height="349" alt="image" src="https://github.com/user-attachments/assets/eb33f307-ce24-4568-94d8-ea813b3d9617" />
 
+Tämän muutoksen jälkeen configtesti antaa ookoota ja reloadaan apachen uudestaan. Taas error?? No onneksi huomaan vihdoin viimein että kyse oli siitä etten lisännyt sudoa...
+
 
 <img width="866" height="164" alt="image" src="https://github.com/user-attachments/assets/05db2be0-bb5b-48a6-aa80-50ae052fe670" />
+
+Okei. Testaas nyt sitten 
 Eikö mulla ole sitten asetettu oikeuksia oikein?
 
 <img width="861" height="250" alt="image" src="https://github.com/user-attachments/assets/9e1d8ab1-ec75-47cf-9ae3-fa69cc53fa79" />

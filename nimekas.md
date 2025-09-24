@@ -25,3 +25,53 @@ Jooh olinkin vaan koittanut päästä väärillä tunnareilla sisään. Mutta se
 <img width="871" height="318" alt="ecb644ed1253d6c86cc4330b2c37eaf4" src="https://github.com/user-attachments/assets/91efc21a-652e-45d0-8f69-ee7797ab991f" />
 
 Taidan palauttaa tämän raportin jo etuajassa, kun täytyy alkaa tuon serverin kanssa taas temmeltämään... Lisään myöhemmin tänne loput tehtävät!
+
+## Uusi yritys
+
+No nyt on uusi palvelin pyörimässä ja alkuasetukset tehty, eli luotu oma käyttäjä, poistettu root-tili käytöstä, asennettu apache ja tulimuuri päällä reikien kera. Hyvää harjoitusta.
+
+`lofving.me` osoittaa nyt weppipalvelimeeni. 
+
+<img width="595" height="129" alt="image" src="https://github.com/user-attachments/assets/3b5f3ff6-46c8-4c10-8d26-97e6cbbb06fc" />
+
+Täytyi vain muokata A-record namecheapin domain-asetuksista osoittamaan UpCloud-ip-osoitteeseen,
+
+<img width="1157" height="663" alt="image" src="https://github.com/user-attachments/assets/4c0411f4-4b85-4cc3-b8b8-e8ef975997a6" />
+
+ja muokata Apachen VitrualHost conffia lisäämällä dns-nimi ServerName ja ServerAlias kohtiin:
+
+`sudo micro /etc/apache2/sites-available/lofving.me.conf`
+
+<img width="640" height="337" alt="image" src="https://github.com/user-attachments/assets/c52c5feb-7ab8-4218-9867-a4313473a331" />
+
+ja toki `sudo a2ensite lofving.me.conf`
+        `sudo systemctl reload apache2`
+
+## Alidomainien lisääminen
+
+onnistuu helposti lisäämällä uuden recordin NameCheapin DNS-asetuksiin,
+
+<img width="1166" height="353" alt="image" src="https://github.com/user-attachments/assets/e3f2dfd4-9eec-4517-85fc-a591252584fb" />
+
+ja lisäämällä myös uuden VirtualHostin:
+
+<img width="691" height="431" alt="image" src="https://github.com/user-attachments/assets/5fe5e171-a667-4bd6-bbab-cffc1810a310" />
+
+`sudo systemctl reload apache2`
+
+<img width="691" height="431" alt="image" src="https://github.com/user-attachments/assets/86019615-0b0c-4b7a-82fc-83c34e8e8140" />
+
+Okei, jostain syystä tuli tämä klassinen errori. Lähdetääs tutkimaan asiaa.
+
+<img width="815" height="156" alt="image" src="https://github.com/user-attachments/assets/4dec2dfc-c3e1-471d-a0af-3e63da1b9990" />
+
+__LISÄÄ TÄHÄN TIETOA AH00558__
+
+Testasin luoda uuden VirtualHost-conf-tiedoston alidomainille, jolla on myös oma documentroot, ja sehän sitten toimikin!
+
+<img width="815" height="156" alt="image" src="https://github.com/user-attachments/assets/5d9e292c-f050-4e09-be3b-73e7bd8d485d" />
+
+eli `sudo cp /etc/apache2/sites-available/lofving.me.conf /etc/apache2/sites-available/linuxkurssi.lofving.me.conf`,
+sieltä muutin vain servernamen `linuxkurssi.lofving.me` ja documentrootin `/home/marek/lofving/alidomain/linuxkurssi`
+
+

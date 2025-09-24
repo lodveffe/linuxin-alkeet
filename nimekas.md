@@ -74,4 +74,11 @@ Testasin luoda uuden VirtualHost-conf-tiedoston alidomainille, jolla on myös om
 eli `sudo cp /etc/apache2/sites-available/lofving.me.conf /etc/apache2/sites-available/linuxkurssi.lofving.me.conf`,
 sieltä muutin vain servernamen `linuxkurssi.lofving.me` ja documentrootin `/home/marek/lofving/alidomain/linuxkurssi`
 
+## host ja dig -komennot
+
+Tutkitaan näiden komentojen avulla muutamien sivujen DNS-tietoja.
+
+<img width="804" height="245" alt="image" src="https://github.com/user-attachments/assets/9b80c1b1-71f5-4afb-bf62-85bfbc2746d1" />
+
+<img width="806" height="486" alt="image" src="https://github.com/user-attachments/assets/1c3fa639-90b5-4637-8220-f49d17e66450" />
 

@@ -65,7 +65,6 @@ Okei, jostain syystä tuli tämä klassinen errori. Lähdetääs tutkimaan asiaa
 
 <img width="815" height="156" alt="image" src="https://github.com/user-attachments/assets/4dec2dfc-c3e1-471d-a0af-3e63da1b9990" />
 
-__LISÄÄ TÄHÄN TIETOA AH00558__
 
 Testasin luoda uuden VirtualHost-conf-tiedoston alidomainille, jolla on myös oma documentroot, ja sehän sitten toimikin!
 
@@ -81,4 +80,16 @@ Tutkitaan näiden komentojen avulla muutamien sivujen DNS-tietoja.
 <img width="804" height="245" alt="image" src="https://github.com/user-attachments/assets/9b80c1b1-71f5-4afb-bf62-85bfbc2746d1" />
 
 <img width="806" height="486" alt="image" src="https://github.com/user-attachments/assets/1c3fa639-90b5-4637-8220-f49d17e66450" />
+
+## Lähteet
+
+UpCloud. 2025. https://upcloud.com/
+
+GitHub Education. 2025. https://github.com/education
+
+NameCheap. 2025. https://www.namecheap.com/
+
+Tero Karvinen. 2017. First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS. https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/
+
+Tero Karvinen. 2025. linux-palvelimet. https://terokarvinen.com/linux-palvelimet/
 

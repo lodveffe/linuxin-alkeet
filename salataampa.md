@@ -48,3 +48,5 @@ Noh SSLLabsin tulos näyttää edelleen arvosanaksi A:n. Tulipahan yritettyä!
 [InMotionHosting 2022](https://www.inmotionhosting.com/support/website/ssl/disable-tls-versions/)
 
 [SSLLabs 2025](https://www.ssllabs.com/ssltest/analyze.html?d=lofving.me)
+
+[Tero Karvinen. 2025. linux-palvelimet](https://terokarvinen.com/linux-palvelimet/)

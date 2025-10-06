@@ -69,6 +69,36 @@ Jos sitä ei ilmoita, niin se luo oletuksena tiedoston nimeltä `a.out`
 Tässä kurkkasin mitä `a.out` pitää sisällään ja se on juurikin se käännetty binaaritiedosto koska näyttää tekstieditorissa siansaksalta.
 Kun sen ajaa `./a.out`, niin sieltähän se Hello world! tuli.
 
+## Yhteinen komento
+
+Lisätään shebang-rivi skriptin alkuun, joka kertoo Linuxille, millä ohjelmalla tiedosto ajetaan.
+
+        #! /usr/bin/env python3
+
+        chmod +x infoa.py
+
+        sudo cp infoa.py /usr/local/bin/
+
+Ja tämän jälkeen jokaisen käyttäjän pitäisi pystyä ajamaan skripti mistä tahansa ja ilman ylimääräistä python3 -alkua.
+
+Testataan luomalla uusi käyttäjä
+
+        sudo adduset testi
+
+        su - testi
+
+<img width="1004" height="101" alt="image" src="https://github.com/user-attachments/assets/7157b121-cf16-443a-a0ce-3f6c6a3583b5" />
+
+No olisihan se ollut liian helppoa jos ykkösellä ois mennyt purkkiin. Katsotaas mistä kiikastaa.
+
+<img width="1004" height="117" alt="image" src="https://github.com/user-attachments/assets/148410e2-ab4c-41f1-9dcc-bff0644a2e73" />
+
+Jostain syystä se ei digannut tuosta `env` -komennosta shebangissä. Python3 kuitenkin löytyy `/usr/bin`-hakemistosta niin otin sen poies. [Täältä](https://stackoverflow.com/questions/21612980/why-is-usr-bin-env-bash-superior-to-bin-bash) luin kuinka se `env` olisi hyvä lisätä shebangiin. Eli jos oikein ymmärsin niin se automaattisesti etsii sen pythonin käyttäjän `PATH`ista. __EDIT:__ jälleen kerran huomaan että syntaksi on mun pahin vihollinen. Mulla oli ollut yksi ylimääräinen välilyönti shebangissa, joten se ei ollut toiminut...
+
+
+<img width="916" height="293" alt="image" src="https://github.com/user-attachments/assets/52c20178-31c3-4b43-818b-6ea532fd195f" />
+
+
 ## Lähteet
 
 https://stackoverflow.com/questions/13811020/error-class-x-is-public-should-be-declared-in-a-file-named-x-java

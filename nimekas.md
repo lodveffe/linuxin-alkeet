@@ -83,6 +83,8 @@ Tutkitaan näiden komentojen avulla muutamien sivujen DNS-tietoja.
 
 ## Lähteet
 
+Johanna, H. (2025). linux-03092025.md [Source Code]. https://github.com/johannaheinonen/johanna-test-repo/
+
 UpCloud. 2025. https://upcloud.com/
 
 GitHub Education. 2025. https://github.com/education

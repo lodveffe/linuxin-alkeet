@@ -60,7 +60,7 @@ Hallelujaah vihdoin skulaa, mutta mikä ihmeen index??
 
 <img width="830" height="218" alt="image" src="https://github.com/user-attachments/assets/29304e89-f7b1-4f14-9384-0440beb8f462" />
 
-Täytyy myöntää että nyt kyllä tässä vaiheessa käyn jo kiivasta keskustelua ChatGPT:n kanssa. Selvisi semmoinen, ettei mitään tätä 403 error-rumbaa olisi ollut, jos olisin tehnyt muutoksia index.html nimiseen tiedostoon, mutta kun sen sijaan käytän uussivu.html-nimistä, niin apache ei tiennyt mitä näyttää. Mutta kun lisättiin nuo aikaisemmat Directorylohkoon Options Indexes, niin apache osaa näyttää jotain muuta kuin sen index.html
+Täytyy myöntää että nyt kyllä tässä vaiheessa käyn jo kiivasta keskustelua ChatGPT:n kanssa. Selvisi semmoinen, ettei mitään tätä 403 error-rumbaa olisi ollut, jos olisin tehnyt muutoksia index.html nimiseen tiedostoon, mutta kun sen sijaan käytän uussivu.html-nimistä, niin apache ei tiennyt mitä näyttää. Mutta kun lisättiin nuo aikaisemmat Directorylohkoon Options Indexes, niin apache sallii hakemistoluettelon ja osaa näyttää jotain muutakin kuin sen index.html. (OpenAI, 2025).
 
 Vaihdoin sen html-tiedoston nimeä, ja näin se osasi suoraan ladata oikean sivun.
 
@@ -70,3 +70,11 @@ Vaihdoin sen html-tiedoston nimeä, ja näin se osasi suoraan ladata oikean sivu
 <img width="841" height="262" alt="image" src="https://github.com/user-attachments/assets/9d7a8202-dd4e-4b36-9af6-e7f12d10d4bb" />
 
 Huhhuh meni tässäkin joku 7h sit yhteensä... Täytyy vielä muutama kerta tehdä tämä niin alkaa tulla rutiinilla. Lisään myöhemmin kaikki lähdemerkkinnät yms. Nyt on kiire palauttaa tämä.
+
+## Lähteet
+
+Johanna, H. (2025). linux-03092025.md [Source Code]. https://github.com/johannaheinonen/johanna-test-repo/
+
+Tero Karvinen. 2025. linux-palvelimet. https://terokarvinen.com/linux-palvelimet/
+
+OpenAI. (2025). ChatGPT. Keskustelu 6.9.2025 aiheesta Apache 403 error ja index.html -tiedoston oletuskäyttö. Saatavilla osoitteessa: https://chat.openai.com

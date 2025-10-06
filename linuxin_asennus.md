@@ -16,3 +16,7 @@ Googlailemalla huomasin kyllä, että monilla Ubuntun käyttäjillä oli samanla
 
 Jatkossa raportit tulevat varmasti olemaan kattavampia ja tulen syventymään yksityiskohtaisemmin ongelmanratkaisuihin ja tiedonhakuun. Nyt oli vaan kiire saada toimiva laite käsiini.
 
+## Lähteet
+
+Johanna, H. (2025). linux-20082025.md [Source Code]. https://github.com/johannaheinonen/johanna-test-repo/
+Tero Karvinen. 2025. linux-palvelimet. https://terokarvinen.com/linux-palvelimet/

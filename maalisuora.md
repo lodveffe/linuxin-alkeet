@@ -2,8 +2,6 @@
 
 ## Hello world kolmella kielellä
 
-### Python
-
 
 ### Java
 
@@ -11,7 +9,7 @@ Ladataan java:
 
     sudo apt install jdk-default
 
-[Teron ohjeiden mukaan](https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/) koodataan javalla hello world:
+[Teron ohjeita kurkkasin](https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/) ja koodasin javalla hello world:
 
     micro helloworld.java
 
@@ -31,7 +29,45 @@ Ekaksi puuttui `;` syntaksista.
 Sitten tuli error: `class HelloWorld is public, should be declared in a file HelloWorld.java`
 Seuraavan errorin kanssa käytin liikaa aikaa: `cannot find symbol` viitaten System.out.print.In
 kikkailin syntaksin kanssa jonkin verran mutta erorri toistui... Oli pakko hakea apua [stackoverflowista](https://stackoverflow.com/questions/13811020/error-class-x-is-public-should-be-declared-in-a-file-named-x-java) ja sieltähän se vastaus tulikin ja voi pojat kun tuli hölmö olo.
-Eli se ei ollutkaan print.In vaan print.ln... Damn.
+Eli se ei ollutkaan print.In vaan print.ln... Damn. Ei siis ollut Teron ohjeissa väärin vaan itse pitäisi käydä vaan Specsaversillä.
+
+<img width="512" height="143" alt="image" src="https://github.com/user-attachments/assets/94a5053e-e115-4e79-81f8-00e1ad2e6a02" />
+
+
+### Python
+
+        micro helloworld.py
+        
+        print("Hello world!")
+
+        python3 helloworld.py
+
+<img width="530" height="63" alt="image" src="https://github.com/user-attachments/assets/fd9e6e7b-ace3-4aff-8b27-2391a8bfac63" />
+
+Ihanan selkeä ton Javan jälkeen.
+
+## C
+
+Testataas vielä C:llä. Tätä tuli pienen hetken opiskeltua niin katsotaan muistanko ulkomuistista.
+
+        micro helloworld.c
+
+        #include <stdio.h>
+
+        void main()
+        {
+         printf("Hello world!");
+        }
+
+        gcc helloworld.c
+
+Tässä unohdin lisätä `-o` eli outputin tuon `gcc helloworld.c` perään, joka kertoo kääntäjälle (gcc), minkä nimiseksi käännetty suoritettava tiedosto nimetään.
+Jos sitä ei ilmoita, niin se luo oletuksena tiedoston nimeltä `a.out`
+
+<img width="1825" height="573" alt="image" src="https://github.com/user-attachments/assets/7a634e85-6b78-4b58-ba2e-c975148eef98" />
+
+Tässä kurkkasin mitä `a.out` pitää sisällään ja se on juurikin se käännetty binaaritiedosto koska näyttää tekstieditorissa siansaksalta.
+Kun sen ajaa `./a.out`, niin sieltähän se Hello world! tuli.
 
 ## Lähteet
 

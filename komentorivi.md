@@ -127,4 +127,10 @@ OK. Eli siis näkyy tietoja eri komponenteista. Mutta mitä H / W path meinaa? t
 
 Huhhuh kylläpä kesti näiden läksyjen kanssa. Mutta tuntuu siltä että myös oppii.
 
+## Lähteet
+
+Johanna, H. (2025). linux-27082025.md [Source Code]. https://github.com/johannaheinonen/johanna-test-repo/
+
+Tero Karvinen. 2025. linux-palvelimet. https://terokarvinen.com/linux-palvelimet/
+
         

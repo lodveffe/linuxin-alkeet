@@ -19,4 +19,5 @@ Jatkossa raportit tulevat varmasti olemaan kattavampia ja tulen syventymään yk
 ## Lähteet
 
 Johanna, H. (2025). linux-20082025.md [Source Code]. https://github.com/johannaheinonen/johanna-test-repo/
+
 Tero Karvinen. 2025. linux-palvelimet. https://terokarvinen.com/linux-palvelimet/

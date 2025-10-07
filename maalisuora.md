@@ -98,11 +98,105 @@ Jostain syystä se ei digannut tuosta `env` -komennosta shebangissä. Python3 ku
 
 <img width="916" height="293" alt="image" src="https://github.com/user-attachments/assets/52c20178-31c3-4b43-818b-6ea532fd195f" />
 
+Koodi näytti ohjelmassa tältä:
 
+<img width="761" height="432" alt="image" src="https://github.com/user-attachments/assets/64737d70-ff0e-4a56-ae8e-b4894810ac62" />
+
+## Vanha labraharjoitus soveltavasti
+
+[Täältä](https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-syksy-linux-palvelimet/) poimin tehtäviä tehtäväksi.
+
+Uudelta ja mielenkiintoiselta vaikutti tuo Django kehitysympäristön asennus ja sen tutkiminen, joten lähdin sitä työstämään. En ole siis aikaisemmin koskenutkaan siihen.
+
+Käytin tehtävien teossa ohjeena [W3Schoolia](https://www.w3schools.com/django/django_create_virtual_environment.php).
+
+Eli tarvitaan Pythonin package installeri nimeltä `pip`
+
+        sudo apt install pip
+
+Seuraavaksi luodaan virtuaaliympäristö projektille
+
+        mkdir djhatut
+        cd djatut
+        python3 -m venv djhats
+
+<img width="817" height="348" alt="image" src="https://github.com/user-attachments/assets/387f8b99-a139-492f-8301-b45ad262a94a" />
+
+OK. Latasin tuon, poistin sen virheellisen hakemiston alihakemistoineen `rm -r djhats` ja ajoin uudestaan.
+Aktivoin ympäristön:
+
+        source djhats/bin/activate
+
+<img width="811" height="201" alt="image" src="https://github.com/user-attachments/assets/f6c1ae1f-9ddf-49fb-83d2-4724d1f3bcb2" />
+
+Tuo aktivointi täytyy tehdä joka kerta kun haluaa työskennellä Django-projektin parissa. (W3School.2025)
+
+Nyt sitten pääsin lataamaan Django. Se tehdään, kun ollaan tuossa ympäristössä.
+
+        python -m pip install Django
+
+Startataan projekti
+
+        django-admin startproject djangohats
+        cd djangohats
+        python manage.py runserver
+
+Tämän jälkeen voi käydä katsomassa miltä projekti näyttää selaimessa 127.0.0.1:8000 
+
+<img width="814" height="408" alt="image" src="https://github.com/user-attachments/assets/bacaa895-9bff-41c7-ae12-7673d50452b4" />
+
+Seuravaaksi luodaan se hattuäppi Djangoon.
+
+        python manage.py startapp hats
+
+Tässä vaiheessa siirryin käyttämään tekoälyä mentorinani, sillä W3Schools keskittyi Hello Worldiin. ChatGPT (OpenAI, 2025) kävi läpi seuraavat askeleet, kun iskin sille promptiksi tehtävänannon ja että olen nyt siinä vaiheessa, että hattuäppi löytyy jo.
+
+Ensimmäiseksi käski rekisteröimään sovelluksen `settings.py`-tiedostossa
+
+        micro djhats/djangohats/djangohats/settings.py
+
+Ois kyllä pitänyt nimetä vähän eri nimisiksi näitä ympäristöjä :D
+
+<img width="772" height="274" alt="image" src="https://github.com/user-attachments/assets/cdc9a532-c095-4571-aefe-06d3818169a9" />
+
+Settingseistä etsittiin `INSTALLED_APPS`-kohta ja sinne lisättiin `hats` ChatGPT (OpenAI, 2025)
+
+Seuraavaksi luotiin tietorakenne `models.py`-tiedostoon:
+
+<img width="927" height="262" alt="image" src="https://github.com/user-attachments/assets/4855415d-b688-4017-8b43-36a63b830fdf" />
+
+Sitten lisättiin kyseinen malli admin-paneeliin
+
+        micro djhats/djangohats/hats/admin.py
+        from django.contrib import admin
+        from .models import Hat
+
+        admin.site.register(Hat)
+
+Lopuksi päivitetään tietokanta ja luodaan ylläpitäjä
+
+        python manage.py makemigrations
+        python manage.py migrate
+        python manage.py createsuperuser
+
+Käynnistetään palvelin ja avataan selain
+
+        python manage.py runserver
+        selaimeen 127.0.0.1:8000/admin
+
+Tuolta päästiin sitten kirjautumaan sisään luoduilla tunnuksilla ja käsittelemään hattuja.
+
+<img width="949" height="451" alt="image" src="https://github.com/user-attachments/assets/cf9b36a5-1f2e-4d2c-ba50-2eda098ce419" />
+
+Olihan tää nyt oikein suoraviivaista kun seurasi W3Schoolin ja ChatGPT:n ohjeita, mutta ihan hyvä ensimaku Djangoon.
+        
 ## Lähteet
 
 https://stackoverflow.com/questions/13811020/error-class-x-is-public-should-be-declared-in-a-file-named-x-java
 
-https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/
+Tero Karvinen. 2018. https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/
 
-https://stackoverflow.com/questions/9298980/variable-out-of-type-printstream-error-occured
+Stackoverflow. Variable out of type printstream error occured .2015. Haettu 6.10.2025. https://stackoverflow.com/questions/9298980/variable-out-of-type-printstream-error-occured
+
+W3Schools. Django. (n.d). Haettu 7.10.2025. https://www.w3schools.com/django/django_create_virtual_environment.php
+

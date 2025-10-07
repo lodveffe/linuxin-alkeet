@@ -104,17 +104,16 @@ Koodi näytti ohjelmassa tältä:
 
 ## Vanha labraharjoitus soveltavasti
 
-[Täältä](https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-syksy-linux-palvelimet/) poimin tehtäviä tehtäväksi.
-
-Uudelta ja mielenkiintoiselta vaikutti tuo Django kehitysympäristön asennus ja sen tutkiminen, joten lähdin sitä työstämään. En ole siis aikaisemmin koskenutkaan siihen.
+Poimin [vuoden 2024 Linux-palvelimet-kurssin labraharjoituksista](https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-syksy-linux-palvelimet/) tehtäviä tehtäväksi.
+Tuon pythonkomennon olenkin jo tehnyt tuossa aikaisemmin, ja apacheympäristön rakennus on jo moneen otteeseen käyty läpi kurssin aikana, joten uudelta ja mielenkiintoiselta vaikutti tuo Django kehitysympäristön asennus ja sen tutkiminen, joten lähdin sitä työstämään. En ole siis aikaisemmin koskenutkaan siihen.
 
 Käytin tehtävien teossa ohjeena [W3Schoolia](https://www.w3schools.com/django/django_create_virtual_environment.php).
 
-Eli tarvitaan Pythonin package installeri nimeltä `pip`
+Eli tarvitaan Pythonin package installeri nimeltä `pip` (W3School,2025)
 
         sudo apt install pip
 
-Seuraavaksi luodaan virtuaaliympäristö projektille
+Seuraavaksi luodaan virtuaaliympäristö projektille (W3School,2025)
 
         mkdir djhatut
         cd djatut
@@ -131,7 +130,7 @@ Aktivoin ympäristön:
 
 Tuo aktivointi täytyy tehdä joka kerta kun haluaa työskennellä Django-projektin parissa. (W3School.2025)
 
-Nyt sitten pääsin lataamaan Django. Se tehdään, kun ollaan tuossa ympäristössä.
+Nyt sitten pääsin lataamaan Django. Se tehdään, kun ollaan tuossa ympäristössä. (W3School,2025)
 
         python -m pip install Django
 
@@ -141,31 +140,31 @@ Startataan projekti
         cd djangohats
         python manage.py runserver
 
-Tämän jälkeen voi käydä katsomassa miltä projekti näyttää selaimessa 127.0.0.1:8000 
+Tämän jälkeen voi käydä katsomassa miltä projekti näyttää selaimessa 127.0.0.1:8000 (W3School,2025)
 
 <img width="814" height="408" alt="image" src="https://github.com/user-attachments/assets/bacaa895-9bff-41c7-ae12-7673d50452b4" />
 
-Seuravaaksi luodaan se hattuäppi Djangoon.
+Seuravaaksi luodaan se hattuäppi Djangoon. (W3School,2025)
 
         python manage.py startapp hats
 
 Tässä vaiheessa siirryin käyttämään tekoälyä mentorinani, sillä W3Schools keskittyi Hello Worldiin. ChatGPT (OpenAI, 2025) kävi läpi seuraavat askeleet, kun iskin sille promptiksi tehtävänannon ja että olen nyt siinä vaiheessa, että hattuäppi löytyy jo.
 
-Ensimmäiseksi käski rekisteröimään sovelluksen `settings.py`-tiedostossa
+Ensimmäiseksi käski rekisteröimään sovelluksen `settings.py`-tiedostossa (OpenAI, 2025)
 
         micro djhats/djangohats/djangohats/settings.py
 
-Ois kyllä pitänyt nimetä vähän eri nimisiksi näitä ympäristöjä :D
+Ois kyllä pitänyt nimetä vähän eri nimisiksi näitä ympäristöjä :D (minä, 2025)
 
 <img width="772" height="274" alt="image" src="https://github.com/user-attachments/assets/cdc9a532-c095-4571-aefe-06d3818169a9" />
 
-Settingseistä etsittiin `INSTALLED_APPS`-kohta ja sinne lisättiin `hats` ChatGPT (OpenAI, 2025)
+Settingseistä etsittiin `INSTALLED_APPS`-kohta ja sinne lisättiin `hats` (OpenAI, 2025)
 
-Seuraavaksi luotiin tietorakenne `models.py`-tiedostoon:
+Seuraavaksi luotiin tietorakenne `models.py`-tiedostoon: (OpenAI, 2025)
 
 <img width="927" height="262" alt="image" src="https://github.com/user-attachments/assets/4855415d-b688-4017-8b43-36a63b830fdf" />
 
-Sitten lisättiin kyseinen malli admin-paneeliin
+Sitten lisättiin kyseinen malli admin-paneeliin (OpenAI, 2025) 
 
         micro djhats/djangohats/hats/admin.py
         from django.contrib import admin
@@ -173,13 +172,13 @@ Sitten lisättiin kyseinen malli admin-paneeliin
 
         admin.site.register(Hat)
 
-Lopuksi päivitetään tietokanta ja luodaan ylläpitäjä
+Lopuksi päivitetään tietokanta ja luodaan ylläpitäjä (OpenAI, 2025) 
 
         python manage.py makemigrations
         python manage.py migrate
         python manage.py createsuperuser
 
-Käynnistetään palvelin ja avataan selain
+Käynnistetään palvelin ja avataan selain (OpenAI, 2025) 
 
         python manage.py runserver
         selaimeen 127.0.0.1:8000/admin
@@ -188,15 +187,16 @@ Tuolta päästiin sitten kirjautumaan sisään luoduilla tunnuksilla ja käsitte
 
 <img width="949" height="451" alt="image" src="https://github.com/user-attachments/assets/cf9b36a5-1f2e-4d2c-ba50-2eda098ce419" />
 
-Olihan tää nyt oikein suoraviivaista kun seurasi W3Schoolin ja ChatGPT:n ohjeita, mutta ihan hyvä ensimaku Djangoon.
+Olihan tää nyt oikein suoraviivaista kun seurasi W3Schoolin ja ChatGPT:n ohjeita, mutta ihan hyvä ensimaku Djangoon. Iskin nyt kaikkialle noita lähdemerkintöjä ettei tule mitään väärinkäsitystä, onko tekoälyä käytetty. Nähdään huomenna vikalla luennolla!
         
 ## Lähteet
 
-https://stackoverflow.com/questions/13811020/error-class-x-is-public-should-be-declared-in-a-file-named-x-java
+Stackoverflow. Error class x is public should be declared in a file named x java. 2012. Haettu 6.10.2025. https://stackoverflow.com/questions/13811020/error-class-x-is-public-should-be-declared-in-a-file-named-x-java
 
-Tero Karvinen. 2018. https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/
+Tero Karvinen. 2018. Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04. Haettu 6.10.2025. https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/
 
 Stackoverflow. Variable out of type printstream error occured .2015. Haettu 6.10.2025. https://stackoverflow.com/questions/9298980/variable-out-of-type-printstream-error-occured
 
 W3Schools. Django. (n.d). Haettu 7.10.2025. https://www.w3schools.com/django/django_create_virtual_environment.php
 
+OpenAI. 2025. ChatGPT. Haettu 7.10.2025. https://chatgpt.com/
